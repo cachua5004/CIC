@@ -1,0 +1,246 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - CIC</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,600italic,400italic,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+    <link href="~/Content/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/template/plugins/fullcalendar.min.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    @Styles.Render("~/Content/template/bootstrap")
+    @Styles.Render("~/Content/template/plugins")
+    @Styles.Render("~/Content/template")
+    @Styles.Render("~/Content/template/colors")
+
+
+    <header>
+        <div class="topbar clearfix">
+            <div class="container">
+                <ul class="topbar-left">
+                    <li class="phoneNo"><i class="fa fa-phone"></i>0710.2468.007 - Hotline: 0939.422.924</li>
+                    <li class="email-id hidden-xs hidden-sm">
+                        <i class="fa fa-envelope"></i>
+                        <a href="mailto:info@yourdomain.com">anhngucicct@gmail.com</a>
+                    </li>
+                </ul>
+                <ul class="topbar-right">
+                    <li class="hidden-xs"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li class="hidden-xs"><a href="https://www.facebook.com/ANH-NG%E1%BB%AE-CIC-C%E1%BA%A6N-TH%C6%A0-940515362677060/"><i class="fa fa-facebook"></i></a></li>
+                    <li class="hidden-xs"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li class="hidden-xs"><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+                    <li class="hidden-xs"><a href="#"><i class="fa fa-rss"></i></a></li>
+                    <li class="dropdown top-search list-inline">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-search"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <form action="courses.html" method="post">
+                                <input type="text" placeholder="Course Name" id="exampleInputEmail1" class="form-control">
+                                <button class="btn btn-default commonBtn" type="submit">Search</button>
+                            </form>
+                        </ul>
+                    </li>
+                    <li class="dropdown language">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-globe"></i>EN
+                            <i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="active">
+                                <a href="#">English </a>
+                            </li>
+                            <li><a href="#">Vietnamese</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="header clearfix">
+            <nav class="navbar navbar-main navbar-default">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="header_inner">
+                                <!-- Brand and toggle get grouped for better mobile display -->
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav" aria-expanded="false">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                    <a class="navbar-brand logo clearfix" href="@Url.Action("Index", "Home")">
+                                        @*<img src="~/Images/img/logoCIC.png" alt="" class="img-responsive" />*@
+                                        <p style="color: #C80000; text-align: CENTER; font-size: 50px; margin: 20px;">C.I.C</p>
+                                        @*<p style="color: #686868; text-align: center;font-size: 18px; padding-bottom:10px;">Englsih Center</p>*@
+                                    </a>
+                                </div>
+                                <!-- Collect the nav links, forms, and other content for toggling -->
+                                <div class="collapse navbar-collapse" id="main-nav">
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <li class="active"><a href="@Url.Action("Index", "Home")">Home</a></li>
+                                        <li class="dropdown list-inline">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Courses</a>
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <a href="@Url.Action("Courses", "Home")">Full course</a>
+                                                </li>
+                                                <li>
+                                                    <a href="@Url.Action("Events", "Home")">Events</a>
+                                                </li>
+                                                @*<li class="dropdown">
+                                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Courses List View</a>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a href="course-right-sidebar.html">Sidebar Right</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown">
+                                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Single Course</a>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a href="single-course-right-sidebar.html">Sidebar Right</a></li>
+                                                            <li><a href="single-course-left-sidebar.html">Sidebar Left</a></li>
+                                                            <li><a href="single-course-fullwidth.html">Fullwidth</a></li>
+                                                        </ul>
+                                                    </li>*@
+                                                <li>
+                                                    <a href="@Url.Action("ApplyCourse", "Home")" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Apply Course</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Teaching and learning</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Test you Enlish</a></li>
+                                                <li><a href="#">Fun English Corner</a></li>
+                                                <li><a href="#">Online Lessons</a></li>
+                                                <li><a href="#">Free Download</a></li>
+                                                <li><a href="@Url.Action("Events", "Home")">Testing Calendar</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contact C.I.C</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="@Url.Action("About", "Home")">About Us</a></li>
+                                                <li><a href="@Url.Action("Contact", "Home")">Contact Us</a></li>
+                                                <li><a href="@Url.Action("Teachers", "Home")">Teachers</a></li>
+                                                <li><a href="@Url.Action("TeachingEquipment", "Home")">Teaching equipment</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="apply_now"><a href="@Url.Action("ApplyCourse", "Home")">Apply Now</a></li>
+                                    </ul>
+                                </div>
+                                <!-- navbar-collapse -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.container -->
+            </nav>
+            <!-- navbar -->
+        </div>
+    </header>
+    <div id="body">
+        @* class="content-wrapper main-content clear-fix" *@
+        @RenderSection("featured", required: false)
+        <section>
+            @RenderBody()
+        </section>
+    </div>
+
+    <div class="menuFooter clearfix">
+        <div class="container">
+            <div class="row clearfix">
+
+                <div class="col-sm-3 col-xs-6">
+                    <ul class="menuLink clearfix">
+                        <li><a href="@Url.Action("About", "Home")">About Us</a></li>
+                        <li><a href="@Url.Action("WhyChooseUs", "Home")">Why Choose Us?</a></li>
+                    </ul>
+                </div><!-- col-sm-3 col-xs-6 -->
+
+                <div class="col-sm-3 col-xs-6 borderLeft clearfix">
+                    <ul class="menuLink clearfix">
+                        <li><a href="@Url.Action("Courses", "Home")">All Courses</a></li>
+                        @*<li><a href="buying-steps.html">Admission</a></li>*@
+                        <li><a href="@Url.Action("TeachingEquipment", "Home")">Teaching equipment</a></li>
+                        @*<li><a href="international_students.html">International Students</a></li>*@
+                    </ul>
+                </div><!-- col-sm-3 col-xs-6 -->
+
+                <div class="col-sm-3 col-xs-6 borderLeft clearfix">
+                    <div class="footer-address">
+                        <h5>Location:</h5>
+                        <address>
+                            CIC - English Center<br>
+                            101A Nguyen De St<br>
+                            Can Tho
+                        </address>
+                        <a href="@Url.Action("Contact", "Home")"><span class="place"><i class="fa fa-map-marker"></i>Main C.I.C</span></a>
+                    </div>
+                </div><!-- col-sm-3 col-xs-6 -->
+
+                <div class="col-sm-3 col-xs-6 borderLeft clearfix">
+                    <div class="socialArea clearfix">
+                        <h5>Find us on:</h5>
+                        <ul class="list-inline ">
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                            <li><a href="#"><i class="fa fa-flickr"></i></a></li>
+                            <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+                        </ul>
+                    </div><!-- social -->
+                    <div class="contactNo clearfix">
+                        <h5>Call us on:</h5>
+                        <h3>0710.2468.007</h3>
+                    </div><!-- contactNo -->
+                </div><!-- col-sm-3 col-xs-6 -->
+
+            </div><!-- row clearfix -->
+        </div><!-- container -->
+    </div><!-- menuFooter -->
+    <div class="footer clearfix">
+        <div class="container">
+            <div class="row clearfix">
+                <div class="col-sm-6 col-xs-12 copyRight">
+                    <p>
+                        © 2016 Copyright Royal College Bootstrap Template by <a href="http://www.iamabdus.com">Abdus</a>
+                    </p>
+                </div>
+                <!-- col-sm-6 col-xs-12 -->
+                <div class="col-sm-6 col-xs-12 privacy_policy">
+                    <a href="contact-us.html">Contact us</a>
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                </div>
+                <!-- col-sm-6 col-xs-12 -->
+            </div>
+            <!-- row clearfix -->
+        </div>
+        <!-- container -->
+    </div>
+
+    <script src="~/Scripts/jquery.js"></script>
+    <script src="~/Scripts/bootstrap/bootstrap.min.js"></script>
+    <script src="~/Scripts/plugins/jquery.flexslider.js"></script>
+    <script src="~/Scripts/plugins/jquery.selectbox-0.1.3.min.js"></script>
+    <script src="~/Scripts/plugins/jquery.magnific-popup.js"></script>
+    <script src="~/Scripts/plugins/waypoints.min.js"></script>
+    <script src="~/Scripts/plugins/jquery.counterup.js"></script>
+    <script src="~/Scripts/plugins/wow.min.js"></script>
+    <script src="~/Scripts/plugins/navbar.js"></script>
+    <script src="~/Scripts/plugins/moment.min.js"></script>
+    <script src="~/Scripts/plugins/fullcalendar.min.js"></script>
+    <script src="~/Scripts/plugins/jquery.countTo.js"></script>
+    <script src="~/Scripts/plugins/jquery.syotimer.js"></script>
+    <script src="~/Scripts/custom.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
